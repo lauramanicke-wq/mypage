@@ -1,3 +1,8 @@
+body {
+    background-color: black;
+    margin: 0; 
+}
+
 p{
 
     color:rgb(36, 215, 172);
