@@ -8,6 +8,7 @@ p{
     color:rgb(36, 215, 172);
     font-size:10vw ;
     background-color: black;
+    font-family: myfont;
 
 }
 
@@ -22,3 +23,7 @@ display:flex;
 justify-content: center;
 }
 
+@font-face {
+    font-family: myfont;
+    src: url(./fonts/Oswald-VariableFont_wght.ttf);
+}
