@@ -1,7 +1,7 @@
 :root{
     --black: #000000;
     --white: #ffffff;
-    --gradient: linear-gradient(to top, #000000 0,01%, #ffffff 100%)
+    --gradient: linear-gradient(to top, #eaeaea 0%, #ffffff 100%);
 }
 
 * {
@@ -12,23 +12,22 @@
 
 body {
     background-color: var(--black);
-    margin: 0; 
     font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    position: relative;
-    padding: 30px;
     position: fixed;
+    top: 0;
     width: 100%;
+    padding: 25px 30px;
+
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
+
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
+    z-index: 100;
 }
 
 nav {
@@ -56,55 +55,129 @@ header div {
 .button {
     background: var(--gradient);
     color: var(--black);
-    text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-family: myfont;
-    padding: 8px 16px;
+
+    padding: 10px 18px;
     border-radius: 25px;
-    text-decoration: none;
+
     display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: 500;
+
+    text-decoration: none;
     transition: 0.2s ease;
 }
 
 .button:hover {
-    background-color: #e5e5e5;
     transform: scale(1.05);
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
-#link{
-    
-    font-size: 50ßt;
+section {
+    min-height: 100vh;
 }
-#bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;   
-    height: auto;  
-    z-index: -1;
+
+#home {
+    background: url("./images/portfolio.png") center / cover no-repeat;
 }
 
 
-p{
-    color: var(--white);
-    font-size:10vw ;
-    font-family: myfont;
-
+#work {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
-#collage {
-    width: 60vw; 
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.work-card {
+    height: 60vh;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.work-card img {
+    height: 100%;
+    width: auto;
     display: block;
-    margin-top: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 
+#about {
+    background: url("./images/bg-black.png") center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: 80%;
+}
+
+.about-text {
+    color: var(--white);
+    max-width: 500px;
+}
+
+.about-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(135deg, #222, #444);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: var(--black);
+    color: #aaa;
+    font-size: 14px;
+    width: 100%;
+    padding: 25px 30px;
+}
 
 @font-face {
     font-family: myfont;
