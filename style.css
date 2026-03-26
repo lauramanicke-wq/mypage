@@ -3,6 +3,10 @@ body {
     margin: 0; 
 }
 
+#link{
+    
+    font-size: 50ßt;
+}
 #bg {
     position: absolute;
     top: 0;
