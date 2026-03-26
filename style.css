@@ -76,8 +76,16 @@ p{
     margin-left: auto;
     margin-right: 45px;
     width: 115px;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+
+#button-container:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
 
 #button {
     width: 115px;
@@ -87,7 +95,7 @@ p{
 
 #button-text {
     position: absolute;
-    right: 22px;      
+    right: 23px;      
     top: 50%;
     transform: translateY(-50%);
     
