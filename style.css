@@ -1,6 +1,78 @@
+:root{
+    --black: #000000;
+    --white: #ffffff;
+    --gradient: linear-gradient(to top, #000000 0,01%, #ffffff 100%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
+    background-color: var(--black);
     margin: 0; 
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: myfont;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+header div {
+    position: absolute;
+    right: 30px;
+}
+
+.button {
+    background: var(--gradient);
+    color: var(--black);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: myfont;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    background-color: #e5e5e5;
+    transform: scale(1.05);
+    opacity: 0.85;
 }
 
 #link{
@@ -18,8 +90,7 @@ body {
 
 
 p{
-
-    color:rgb(255, 255, 255);
+    color: var(--white);
     font-size:10vw ;
     font-family: myfont;
 
@@ -33,77 +104,7 @@ p{
     margin-right: auto;
 }
 
-#container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
 
-    display: flex;
-    align-items: center;
-
-    padding: 20px;
-
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-}
-
-
-.nav-center {
-    display: flex;
-    gap: 60px;
-
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-#container a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: myfont;
-}
-
-#container a:hover { 
-    opacity: 0.6;
-}
-
-#button-container {
-    position: relative;
-    margin-left: auto;
-    margin-right: 45px;
-    width: 115px;
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-
-#button-container:hover {
-    transform: scale(1.05);
-    opacity: 0.85;
-}
-
-#button {
-    width: 115px;
-    display: block;
-}
-
-
-#button-text {
-    position: absolute;
-    right: 23px;      
-    top: 50%;
-    transform: translateY(-50%);
-    
-    color: rgb(0, 0, 0);
-    font-family: myfont;
-    font-size: 20px;
-    pointer-events: none; 
-}
 
 @font-face {
     font-family: myfont;
