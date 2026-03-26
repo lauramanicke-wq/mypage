@@ -1,8 +1,27 @@
-:root{
+:root {
     --black: #000000;
     --white: #ffffff;
     --gray: #131313;
     --gradient: linear-gradient(to top, #eaeaea 0%, #ffffff 100%);
+}
+
+.mouse-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    pointer-events: none;
+
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 40%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    transition: opacity 0.2s ease;
+}
+
+.mouse-light.hidden {
+    opacity: 0;
 }
 
 * {
@@ -13,7 +32,7 @@
 
 body {
     background-color: var(--black);
-    font-family: Arial, sans-serif;
+    font-family: myfont;
 }
 
 header {
@@ -75,16 +94,15 @@ header div {
     opacity: 0.9;
 }
 
-section {
-    min-height: 100vh;
-}
 
 #home {
+    min-height: 100vh;
     background: url("./images/portfolio.png") center / cover no-repeat;
 }
 
 
 #work {
+    height: 70vh;
     background-color: var(--gray);
     display: flex;
     align-items: center;
@@ -107,20 +125,29 @@ section {
     height: 60vh;
     flex-shrink: 0;
     overflow: hidden;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .work-card img {
     height: 80%;
     width: auto;
     display: block;
-    box-shadow: 0 12px 28px #000000;
+    box-shadow: 0 12px 28px var(--black);
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.work-card:hover img {
+    filter: grayscale(0%);
 }
 
 @keyframes scroll {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-50%);
     }
@@ -128,6 +155,7 @@ section {
 
 
 #about {
+    min-height: 100vh;
     background: url("./images/bg-black.png") center / cover no-repeat;
     display: flex;
     justify-content: center;
@@ -167,7 +195,7 @@ section {
     width: 300px;
     height: 400px;
     background: linear-gradient(135deg, #222, #444);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -175,8 +203,9 @@ footer {
     display: flex;
     justify-content: space-between;
     background: var(--black);
-    color: #aaa;
-    font-size: 14px;
+    color: var(--white);
+    font-size: 16px;
+    font-family: myfont;
     width: 100%;
     padding: 25px 30px;
 }
