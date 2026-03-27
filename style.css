@@ -198,7 +198,14 @@ header div {
     box-shadow: 0 20px 60px var(--black);
 }
 
-
+body.work-page {
+    background-image: url("./images/bg_work.jpg");
+    background-size: 100% auto;  
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: var(--black);    
+    min-height: 200vh;        
+}
 
 footer {
     display: flex;
