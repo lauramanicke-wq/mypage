@@ -8,7 +8,7 @@ document.addEventListener("mousemove", (e) => {
 
 // Verstecken von der Taschenlampe wenn Hover über Work
 document.addEventListener("mouseover", (e) => {
-    if (e.target.closest(".work-card")) {
+    if (e.target.closest("img")) {
         light.classList.add("hidden");
     } else {
         light.classList.remove("hidden");
