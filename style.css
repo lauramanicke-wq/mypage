@@ -149,7 +149,6 @@ header div {
     filter: grayscale(0%);
 }
 
-/* horizontales scrollen */
 @keyframes scroll {
     from {
         transform: translateX(0);
