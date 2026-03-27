@@ -5,6 +5,7 @@
     --gradient: linear-gradient(to top, #eaeaea 0%, #ffffff 100%);
 }
 
+/* Taschenlampen Effekt */
 .mouse-light {
     position: fixed;
     top: 0;
@@ -12,7 +13,7 @@
     width: 300px;
     height: 300px;
     pointer-events: none;
-
+    /* Kreis Licht */
     background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 40%, transparent 70%);
     transform: translate(-50%, -50%);
     z-index: 999;
@@ -35,6 +36,7 @@ body {
     font-family: myfont;
 }
 
+/* header oben fixiert */
 header {
     position: fixed;
     top: 0;
@@ -55,6 +57,7 @@ nav {
     gap: 50px;
 }
 
+/* Navigation */
 nav a {
     color: var(--white);
     text-decoration: none;
@@ -72,6 +75,7 @@ header div {
     right: 30px;
 }
 
+/* Button */
 .button {
     background: var(--gradient);
     color: var(--black);
@@ -114,6 +118,7 @@ header div {
     overflow: hidden;
 }
 
+/* Bilder Lauf Animation */
 .track {
     display: flex;
     gap: 20px;
@@ -139,10 +144,12 @@ header div {
     transition: filter 0.3s ease;
 }
 
+/* Farbwechsel beim hovern */
 .work-card:hover img {
     filter: grayscale(0%);
 }
 
+/* horizontales scrollen */
 @keyframes scroll {
     from {
         transform: translateX(0);
@@ -198,6 +205,7 @@ header div {
     box-shadow: 0 20px 60px var(--black);
 }
 
+/* footer unten */
 footer {
     display: flex;
     justify-content: space-between;
@@ -209,13 +217,14 @@ footer {
     padding: 25px 30px;
 }
 
+/* work Seite Hintergrund */
 body.work-page {
     background-image: url("./images/bg_work.jpg");
-    background-size: 100% auto;  
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: var(--black);    
-    min-height: 100vh;        
+    background-color: var(--black);
+    min-height: 100vh;
 }
 
 .work-block {
@@ -235,11 +244,12 @@ body.work-page {
     height: 90%;
     width: auto;
     object-fit: cover;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
 
+/* Farbwechsel beim hovern */
 .work-img:hover {
     filter: grayscale(0%);
 }
@@ -260,10 +270,10 @@ body.work-page {
 }
 
 .work-row img {
-    height: 45vh;  
+    height: 45vh;
     width: auto;
     object-fit: cover;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
@@ -277,7 +287,7 @@ body.work-page {
     margin-bottom: 20px;
     background: var(--black);
     box-shadow: 0 -30px 80px rgba(0, 0, 0, 0.9);
-    margin-top: 120px; 
+    margin-top: 120px;
 }
 
 .work-bottom-block {
@@ -297,6 +307,7 @@ body.work-page {
     height: 80%;
 }
 
+/* meine eigene Schriftart */
 @font-face {
     font-family: myfont;
     src: url(./fonts/InterDisplay-Light.ttf);
