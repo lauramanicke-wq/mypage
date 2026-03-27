@@ -191,12 +191,13 @@ header div {
     justify-content: center;
 }
 
-.image-placeholder {
+.about-img {
     width: 300px;
     height: 400px;
-    background: linear-gradient(135deg, #222, #444);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    box-shadow: 0 20px 60px var(--black);
 }
+
 
 
 footer {
