@@ -1,4 +1,4 @@
-// Taschenlampeneffekt
+// Taschenlampen Effekt
 const light = document.querySelector(".mouse-light");
 
 document.addEventListener("mousemove", (e) => {
@@ -6,7 +6,7 @@ document.addEventListener("mousemove", (e) => {
     light.style.top = e.clientY + "px";
 });
 
-// Verstecken von der Taschenlampe wenn Hover über Work
+// Verstecken von der Taschenlampe wenn man über die Work Bilder hovert
 document.addEventListener("mouseover", (e) => {
     if (e.target.closest("img")) {
         light.classList.add("hidden");
